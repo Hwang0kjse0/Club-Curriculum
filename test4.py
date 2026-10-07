@@ -3,10 +3,10 @@ n, k = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 
-# A는 작은 순서대로 정렬
+# A는 작은 순서대로 정렬 (오름차순)
 A.sort()
 
-# B는 큰 순서대로 정렬
+# B는 큰 순서대로 정렬 (내림차순)
 B.sort(reverse=True)
 
 for i in range(k):
