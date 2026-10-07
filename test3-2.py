@@ -1,14 +1,16 @@
+# queue 큐 불러오기
 from collections import deque
 
 n, m = map(int, input().split())
 
+# 빈 2차원 리스트
 graph = []
 
 for i in range(n):
     graph.append(list(map(int, input())))
 
 
-# 거리 저장 배열
+# 거리 저장 배열 (최단 거리 기록하기)
 distance = [[0] * m for _ in range(n)]
 
 
@@ -21,8 +23,9 @@ def bfs():
 
     queue = deque()
 
-    # 시작점
+    # 시작 위치 큐에 넣기
     queue.append((0, 0))
+    # 시작 칸도 거리 1로 계산
     distance[0][0] = 1
 
     while queue:
