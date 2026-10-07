@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 
 rice_cakes = list(map(int, input().split()))
 
-# 이진 탐색 범위
+# 이진 탐색 범위의 시작
 start = 0
 end = max(rice_cakes)
 
@@ -10,7 +10,7 @@ end = max(rice_cakes)
 result = 0
 
 while start <= end:
-
+# 중간 높이를 시험해 본다
     mid = (start + end) // 2
 
     total = 0
@@ -27,7 +27,8 @@ while start <= end:
 
     # 떡이 충분하면 더 높은 절단기 높이를 탐색
     else:
-        result = mid
+        # 해당 높이 저장
+        result = mid 
         start = mid + 1
 
 print(result)
